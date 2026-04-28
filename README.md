@@ -106,4 +106,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Built with ❤️ for creators by [Antigravity AI]*
+*Built with ❤️ for creators*
