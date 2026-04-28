@@ -23,8 +23,8 @@ Ensure you have Python 3.9+ installed. We recommend using a virtual environment.
 ### 2. Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sonicscout.git
-cd sonicscout
+git clone https://github.com/peiyan0/ai-music-selection.git
+cd ai-music-selection
 
 # Install dependencies
 pip install -r requirements.txt
