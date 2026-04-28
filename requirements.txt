@@ -1,0 +1,11 @@
+streamlit
+opencv-python-headless
+torch
+torchvision
+sentence-transformers
+ffmpeg-python
+requests
+python-dotenv
+numpy
+pillow
+scikit-learn
