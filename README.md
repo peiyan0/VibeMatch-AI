@@ -1,6 +1,6 @@
 # 🎵 SonicScout: AI Music Matchmaker
 
-**Live Demo**: [https://peiyan0-ai-music-selection-app-ijfwbt.streamlit.app/](https://peiyan0-ai-music-selection-app-ijfwbt.streamlit.app/)
+**Live Demo**: [https://ai-music-selection.streamlit.app/](https://ai-music-selection.streamlit.app/)
 
 **SonicScout** is an intelligent AI agent designed for content creators and YouTubers. It bridge the gap between visual storytelling and audio accompaniment by automatically analyzing video vibes and matching them with legally safe, high-quality CC0 and Public Domain music.
 
