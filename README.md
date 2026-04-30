@@ -2,7 +2,7 @@
 
 **Live Demo**: [https://vibematch-ai.streamlit.app/](https://vibematch-ai.streamlit.app/)
 
-**VibeMatch AI** is a professional-grade AI agent designed for content creators and YouTubers. It bridges the gap between visual storytelling and audio accompaniment by automatically analyzing video vibes, tempo, and mood to match them with legally safe, high-quality CC0 and Public Domain music.
++ **VibeMatch AI** is an AI-powered music matchmaker for content creators. It automatically analyzes video visual energy, mood, and semantics to find 100% free CC0 and Public Domain music using CLIP and the Freesound APIv2—ensuring your videos are always monetization-safe.
 
 ---
 
