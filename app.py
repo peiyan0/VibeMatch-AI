@@ -8,7 +8,7 @@ import time
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="SonicScout | Creator Music Matchmaker",
+    page_title="VibeMatch AI | Copyright-Free Music for Video Creators",
     page_icon="🎵",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -133,9 +133,9 @@ def main():
     # Hero Section - Compacted
     st.markdown("""
         <div style='text-align: center; padding: 1rem 0 2rem 0;'>
-            <h1 style='font-size: 2.5rem; margin-bottom: 0.2rem;'>🎵 Sonic<span class='gradient-text'>Scout</span></h1>
+            <h1 style='font-size: 2.5rem; margin-bottom: 0.2rem;'>🎵 Vibe<span class='gradient-text'>Match AI</span></h1>
             <p class='text-secondary' style='max-width: 600px; margin: 0 auto;'>
-                The AI music matchmaker for creators. Find <b>100% Monetization-Safe</b> tracks that fit your video's exact vibe.
+                The intelligent AI music matchmaker for creators. Find <b>100% Monetization-Safe</b> background tracks that fit your video's exact vibe.
             </p>
         </div>
     """, unsafe_allow_html=True)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Freesound provides CC0 (Public Domain) and Creative Commons licensed audio. Use this for **motion-synced background music** and **ambient textures** in SonicScout.
+Freesound provides CC0 (Public Domain) and Creative Commons licensed audio. Use this for **motion-synced background music** and **ambient textures** in VibeMatch AI.
 
 **Base URL:** `https://freesound.org/apiv2`
 
@@ -21,7 +21,7 @@ Freesound provides CC0 (Public Domain) and Creative Commons licensed audio. Use 
 | Get preview URL | From sound response | None |
 | Download original file | `GET /sounds/{id}/download/` | OAuth2 required |
 
-**For SonicScout:** Use `search/content/` for BPM matching, `search/text/` for mood tags. Use **preview URLs** (no OAuth needed).
+**For VibeMatch AI:** Use `search/content/` for BPM matching, `search/text/` for mood tags. Use **preview URLs** (no OAuth needed).
 
 ---
 
@@ -117,7 +117,7 @@ def search_freesound_by_mood(mood_query: str, license_type: str = "cc0", token: 
 
 ---
 
-## Endpoint 2: Content Search (for BPM/Motion Matching) ⭐ **Most Important for SonicScout**
+## Endpoint 2: Content Search (for BPM/Motion Matching) ⭐ **Most Important for VibeMatch AI**
 
 This searches by **audio features** (BPM, pitch, timbre) - perfect for matching your video's motion energy.
 
@@ -267,18 +267,18 @@ def get_sound_details(sound_id: int, token: str) -> dict:
 
 ---
 
-## SonicScout Integration Logic
+## VibeMatch AI Integration Logic
 
 ### Complete Agent Function
 ```python
-class SonicScoutFreesoundAgent:
+class VibeMatchAIFreesoundAgent:
     def __init__(self, api_token: str):
         self.token = api_token
         self.base_url = "https://freesound.org/apiv2"
     
     def match_video_to_sound(self, motion_energy: float, mood_tags: list) -> dict:
         """
-        Core matching function for SonicScout.
+        Core matching function for VibeMatch AI.
         
         Args:
             motion_energy: 0.0 (static) to 1.0 (high action)

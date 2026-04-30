@@ -1,8 +1,8 @@
-# 🎵 SonicScout: AI Music Matchmaker
+# 🎵 VibeMatch AI: Intelligent Music Selection for Video Creators
 
-**Live Demo**: [https://ai-music-selection.streamlit.app/](https://ai-music-selection.streamlit.app/)
+**Live Demo**: [https://vibematch-ai.streamlit.app/](https://vibematch-ai.streamlit.app/)
 
-**SonicScout** is an intelligent AI agent designed for content creators and YouTubers. It bridge the gap between visual storytelling and audio accompaniment by automatically analyzing video vibes and matching them with legally safe, high-quality CC0 and Public Domain music.
+**VibeMatch AI** is a professional-grade AI agent designed for content creators and YouTubers. It bridges the gap between visual storytelling and audio accompaniment by automatically analyzing video vibes, tempo, and mood to match them with legally safe, high-quality CC0 and Public Domain music.
 
 ---
 
@@ -48,7 +48,7 @@ streamlit run app.py
 
 ## 🧠 Project Philosophy: Why Selection Over Generation?
 
-While AI music *generation* is popular, it often carries legal risks regarding training data and commercial rights. SonicScout takes a different approach: **Intelligent Selection.**
+While AI music *generation* is popular, it often carries legal risks regarding training data and commercial rights. **VibeMatch AI** takes a different approach: **Intelligent Selection.**
 
 1. **Copyright Safety**: By sourcing from **CC0 and Public Domain** sources, we ensure your videos are 100% safe for monetization.
 2. **Zero Cost**: No subscription traps or "10 downloads per month" limits.
@@ -59,7 +59,7 @@ While AI music *generation* is popular, it often carries legal risks regarding t
 ## 🔬 Technical Methodology
 
 ### The Matching Engine
-The "Brain" of SonicScout uses a weighted matching equation to rank candidates:
+The "Brain" of VibeMatch AI uses a weighted matching equation to rank candidates:
 
 $$Match Score = (S_{visual} \cdot W_{genre}) + (E_{motion} \cdot W_{tempo}) + M_{mood}$$
 

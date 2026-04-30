@@ -1,5 +1,5 @@
 """
-matcher.py — SonicScout multi-signal music matcher
+matcher.py — VibeMatch AI multi-signal music matcher
 
 Improvements over v1
 ─────────────────────

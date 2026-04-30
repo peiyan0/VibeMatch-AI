@@ -1,5 +1,5 @@
 """
-music_fetcher.py — SonicScout Freesound integration
+music_fetcher.py — VibeMatch AI Freesound integration
 
 Freesound APIv2 reference: https://freesound.org/docs/api/resources_apiv2.html
 
@@ -155,7 +155,7 @@ def _bpm_from_sound(sound: dict, fallback: float) -> float:
 
 
 def _normalize_sound(sound: dict, target_bpm: float) -> dict:
-    """Convert a raw Freesound sound dict to SonicScout's internal format."""
+    """Convert a raw Freesound sound dict to VibeMatch AI's internal format."""
     tags      = sound.get("tags", [])
     bpm       = _bpm_from_sound(sound, target_bpm)
     duration  = sound.get("duration", 30)

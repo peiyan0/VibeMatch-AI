@@ -1,5 +1,5 @@
 """
-analyzer.py — SonicScout video analysis pipeline
+analyzer.py — VibeMatch AI video analysis pipeline
 
 Improvements over v1
 ─────────────────────
