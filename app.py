@@ -113,6 +113,21 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+st.iframe(src="""
+<script>
+    const parentDoc = window.parent.document;
+    // Listener for exclusive playback across all audio/video elements
+    parentDoc.addEventListener('play', function(e){
+        const mediaElements = [...parentDoc.getElementsByTagName('audio'), ...parentDoc.getElementsByTagName('video')];
+        mediaElements.forEach(el => {
+            if(el !== e.target) {
+                el.pause();
+            }
+        });
+    }, true);
+</script>
+""", height=1)
+
 # --- App Logic ---
 def main():
     # Hero Section - Compacted
