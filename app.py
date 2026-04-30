@@ -147,7 +147,7 @@ def main():
         st.markdown("### 1️⃣ Drop Your Clip")
         st.markdown("<p class='text-secondary'>Upload a sample scene to analyze its visual energy.</p>", unsafe_allow_html=True)
         
-        uploaded_file = st.file_uploader("", type=["mp4", "mov", "avi"], label_visibility="collapsed")
+        uploaded_file = st.file_uploader("Upload Video", type=["mp4", "mov", "avi"], label_visibility="collapsed")
         
         if uploaded_file:
             st.video(uploaded_file)
