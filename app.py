@@ -24,8 +24,8 @@ st.markdown("""
     :root {
         --primary-gradient: linear-gradient(135deg, #A855F7 0%, #F472B6 100%);
         --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-        --glass-bg: rgba(255, 255, 255, 0.05);
-        --glass-border: rgba(255, 255, 255, 0.1);
+        --glass-bg: rgba(128, 128, 128, 0.05);
+        --glass-border: rgba(128, 128, 128, 0.1);
     }
 
     html, body, [class*="css"] {
@@ -110,7 +110,7 @@ st.markdown("""
 
     /* Track Cards */
     .track-card {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(128, 128, 128, 0.03);
         border-radius: 16px;
         padding: 1.25rem;
         margin-bottom: 1rem;
@@ -127,8 +127,9 @@ st.markdown("""
     /* Badges */
     .keyword-tag {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.08);
-        color: #ddd;
+        background: rgba(128, 128, 128, 0.1);
+        color: inherit;
+        opacity: 0.9;
         padding: 0.3rem 0.8rem;
         border-radius: 20px;
         font-size: 0.85rem;
@@ -160,7 +161,7 @@ st.markdown("""
     .metric-box {
         text-align: center;
         padding: 1rem;
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(128, 128, 128, 0.1);
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.05);
     }
@@ -168,21 +169,22 @@ st.markdown("""
     .metric-value {
         font-size: 1.8rem;
         font-weight: 800;
-        color: white;
+        color: inherit;
     }
     
     .metric-label {
         font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: #888;
+        color: inherit;
+        opacity: 0.8;
         margin-top: 4px;
     }
 </style>
 """, unsafe_allow_html=True)
 
 # Audio playback isolation script
-st.components.v1.html("""
+st.iframe("""
 <script>
     const parentDoc = window.parent.document;
     parentDoc.addEventListener('play', function(e){
@@ -194,7 +196,7 @@ st.components.v1.html("""
         });
     }, true);
 </script>
-""", height=0)
+""", height=1)
 
 def get_whimsical_message():
     messages = [
@@ -225,10 +227,10 @@ def main():
 
     st.markdown(f"""
         <div class="hero-container">
-            <img src="{hero_img_src}" style="width: 100%; height: 350px; object-fit: cover; opacity: 0.5;">
+            <img src="{hero_img_src}" style="width: 100%; height: 350px; object-fit: cover; opacity: 0.70;">
             <div class="hero-overlay">
-                <h1 style='font-size: 3.5rem; margin: 0; line-height: 1.1; text-shadow: 0 4px 15px rgba(0,0,0,0.5);'>Vibe<span class='gradient-text'>Match AI</span></h1>
-                <p style='font-size: 1.2rem; color: #ccc; margin-top: 10px; font-weight: 300;'>
+                <h1 style='font-size: 3.5rem; margin: 0; line-height: 1.1; color: white;'>Vibe<span class='gradient-text'>Match AI</span></h1>
+                <p style='font-size: 1.2rem; color: #eee; margin-top: 10px; font-weight: 300; text-shadow: 0 2px 4px rgba(0,0,0,0.5);'>
                     The Secret Weapon for Your Next <b>Viral Masterpiece</b>.
                 </p>
             </div>
@@ -240,7 +242,7 @@ def main():
     with col1:
         st.markdown('<div class="glass-card">', unsafe_allow_html=True)
         st.markdown('<div class="section-title"><span>📽️</span> 1. Feed the AI Your Vision</div>', unsafe_allow_html=True)
-        st.markdown("<p style='color: #888; margin-bottom: 1.5rem;'>Upload your edit and let our engine analyze every frame, cut, and emotion.</p>", unsafe_allow_html=True)
+        st.markdown("<p style='opacity: 0.8; margin-bottom: 1.5rem;'>Upload your edit and let our engine analyze every frame, cut, and emotion.</p>", unsafe_allow_html=True)
         
         uploaded_file = st.file_uploader("Upload Video", type=["mp4", "mov", "avi"], label_visibility="collapsed")
         
@@ -270,9 +272,9 @@ def main():
             
             # Mood & Tags
             st.markdown(f"""
-                <div style="background: rgba(255,255,255,0.05); padding: 1.2rem; border-radius: 12px; margin-bottom: 1.5rem; border-left: 4px solid #E100FF;">
+                <div style="background: rgba(128, 128, 128, 0.05); padding: 1.2rem; border-radius: 12px; margin-bottom: 1.5rem; border-left: 4px solid #E100FF;">
                     <div class="metric-label" style="text-align: left;">Detected Mood</div>
-                    <div style="font-size: 1.4rem; font-weight: 700; color: white;">{res['mood'].split('/')[0]} <span style="font-weight: 300; font-size: 0.9rem; color: #888;">& {res['mood'].split('/')[1] if '/' in res['mood'] else ''}</span></div>
+                    <div style="font-size: 1.4rem; font-weight: 700; color: inherit;">{res['mood'].split('/')[0]} <span style="font-weight: 300; font-size: 0.9rem; opacity: 0.8;">& {res['mood'].split('/')[1] if '/' in res['mood'] else ''}</span></div>
                 </div>
             """, unsafe_allow_html=True)
             
@@ -288,8 +290,8 @@ def main():
             st.markdown("""
                 <div style="text-align: center; padding: 2rem 1rem;">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">👀</div>
-                    <h4 style="margin: 0; color: #ddd;">Waiting for input...</h4>
-                    <p style="color: #666; font-size: 0.9rem;">Your video's DNA will appear here after analysis.</p>
+                    <h4 style="margin: 0; opacity: 1.0;">Waiting for input...</h4>
+                    <p style="opacity: 0.8; font-size: 0.9rem;">Your video's DNA will appear here after analysis.</p>
                 </div>
             """, unsafe_allow_html=True)
             
@@ -338,7 +340,7 @@ def main():
                                 <h3 style="margin: 0; padding: 0; font-weight: 700;">{track['title']}</h3>
                                 <span class="safe-badge">🛡️ Monetization Safe</span>
                             </div>
-                            <div style="display: flex; gap: 15px; color: #aaa; font-size: 0.9rem;">
+                            <div style="display: flex; gap: 15px; opacity: 0.7; font-size: 0.9rem;">
                                 <span>👤 <b>{track['artist']}</b></span>
                                 <span>🎸 {track['genre']}</span>
                                 <span>⏱️ {track['bpm']} BPM</span>
@@ -347,7 +349,7 @@ def main():
                         <div style="text-align: right; min-width: 100px;">
                             <div class="metric-label" style="margin-bottom: 4px;">Match Accuracy</div>
                             <div class="match-score">{track['match_score']}%</div>
-                            <div style="background: rgba(255,255,255,0.05); height: 6px; border-radius: 3px; margin-top: 8px; width: 100px; margin-left: auto;">
+                            <div style="background: rgba(128, 128, 128, 0.1); height: 6px; border-radius: 3px; margin-top: 8px; width: 100px; margin-left: auto;">
                                 <div style="width: {track['match_score']}%; background: var(--primary-gradient); height: 100%; border-radius: 3px;"></div>
                             </div>
                         </div>
@@ -373,7 +375,7 @@ def main():
                     with st.expander("📊 Why this match?"):
                         breakdown = track.get('score_breakdown', {})
                         st.markdown(f"""
-                            <div style="font-size: 0.8rem; color: #aaa;">
+                            <div style="font-size: 0.8rem; opacity: 0.7;">
                                 🎯 <b>BPM Sync:</b> {breakdown.get('bpm', 0)}%<br>
                                 🏷️ <b>Semantic Fit:</b> {breakdown.get('semantic', 0)}%<br>
                                 🎭 <b>Mood Alignment:</b> {breakdown.get('mood', 0)}%<br>
@@ -404,8 +406,18 @@ def main():
         st.markdown("Consistency is key. Use VibeMatch AI to speed up your workflow and spend more time on storytelling.")
 
     st.markdown("""
-        <div style="text-align: center; color: #444; font-size: 0.8rem; margin-top: 2rem;">
+        <div style="text-align: center; opacity: 0.7; font-size: 0.8rem; margin-top: 2rem;">
             Built for Creators by VibeMatch AI • Sourcing 100% Legally Safe Audio
+            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://github.com/peiyan0/vibematch-ai" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                    <svg height="16" width="16" viewBox="0 0 16 16" style="fill: currentColor;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    GitHub
+                </a>
+                <a href="https://portfolio-peiyan0s-projects.vercel.app/" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                    <svg height="16" width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    Portfolio
+                </a>
+            </div>
         </div>
     """, unsafe_allow_html=True)
 
