@@ -1,10 +1,10 @@
-# 🎵 VibeMatch AI: Intelligent Music Selection for Video Creators
+# 🎵 VibeMatch AI: Intelligent AI Soundtrack & Royalty-Free Music Generator
 
 ![VibeMatch AI Cover](assets/cover.png)
 
 **Live Demo**: [https://vibematch-ai.streamlit.app/](https://vibematch-ai.streamlit.app/)
 
-+ **VibeMatch AI** is an AI-powered music matchmaker for content creators. It automatically analyzes video visual energy, mood, and semantics to find 100% free CC0 and Public Domain music using CLIP and the Freesound APIv2—ensuring your videos are always monetization-safe.
++ **VibeMatch AI** is an intelligent **AI soundtrack generator** and **royalty-free music generator** alternative for content creators. It automatically analyzes video visual energy, mood, and scene semantics to select 100% free CC0 and Public Domain background music using CLIP and the Freesound APIv2—ensuring your videos are always monetization-safe.
 
 ---
 
@@ -48,13 +48,13 @@ streamlit run app.py
 
 ---
 
-## 🧠 Project Philosophy: Why Selection Over Generation?
+## 🧠 Project Philosophy: Why Selection Beats Traditional AI Music Generators
 
-While AI music *generation* is popular, it often carries legal risks regarding training data and commercial rights. **VibeMatch AI** takes a different approach: **Intelligent Selection.**
+While synthetic **AI music generation** tools are popular, they carry significant legal risks regarding training data, copyrights, and commercial rights. **VibeMatch AI** takes a different approach: it acts as a **smart selection soundtrack generator**.
 
-1. **Copyright Safety**: By sourcing from **CC0 and Public Domain** sources, we ensure your videos are 100% safe for monetization.
-2. **Zero Cost**: No subscription traps or "10 downloads per month" limits.
-3. **Human Quality**: Why settle for AI loops when you can have tracks recorded by real musicians for free?
+1. **Copyright Safety**: Most AI music generators expose you to copyright strikes. Sourcing from **CC0 and Public Domain** ensures your videos are 100% safe for monetization.
+2. **Zero Cost**: No subscription traps or "10 downloads per month" limits common to standard background music generators.
+3. **Human Artistry**: Instead of repetitive synthetic loops produced by an algorithm, our generator matches you with professional tracks recorded by human musicians.
 
 ---
 
@@ -99,7 +99,20 @@ $$Match Score = (S_{visual} \cdot W_{genre}) + (E_{motion} \cdot W_{tempo}) + M_
 - **ML Models**: CLIP (OpenAI), Sentence Transformers
 - **Computer Vision**: OpenCV, scikit-image
 - **API**: Freesound API v2
+- **Agentic Standard**: WebMCP (Web Model Context Protocol) for Wave 3 AI agents
 - **Data**: Freesound CC0/CC-BY Repository
+
+---
+
+## 🤖 WebMCP & Agentic Search Optimization (ASO)
+
+VibeMatch AI is optimized for the **third wave of AI-driven traffic**—autonomous browsing agents. 
+
+We publish a WebMCP actions discoverability manifest at [mcp-actions.json](mcp-actions.json) and support dynamic browser agent integrations:
+- **Declarative Actions**: Declaratively exposes the soundtrack generation action using standard semantic markup elements.
+- **Imperative Actions**: Registers the `generate-soundtrack` capability dynamically in compatible user agent execution frames via `window.parent.navigator.mcpActions.register()`.
+
+This allows browsing agents (e.g., Claude in Chrome, Edge Copilot) to discover, initialize, and direct users seamlessly to complete video music matching tasks.
 
 ---
 

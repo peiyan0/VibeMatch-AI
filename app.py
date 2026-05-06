@@ -10,7 +10,7 @@ import base64
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="VibeMatch AI | Pro Soundtrack Finder for YouTubers",
+    page_title="VibeMatch AI | AI Soundtrack & Royalty-Free Music Generator",
     page_icon="🎬",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -183,10 +183,12 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Audio playback isolation script
+# --- SEO Optimization & Agentic Search Integration (WebMCP) ---
 st.iframe("""
 <script>
     const parentDoc = window.parent.document;
+    
+    // 1. Audio Playback Isolation
     parentDoc.addEventListener('play', function(e){
         const mediaElements = [...parentDoc.getElementsByTagName('audio'), ...parentDoc.getElementsByTagName('video')];
         mediaElements.forEach(el => {
@@ -195,6 +197,57 @@ st.iframe("""
             }
         });
     }, true);
+
+    // 2. Headless Search Engine Optimization (On-Page SEO)
+    let metaDesc = parentDoc.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+        metaDesc = parentDoc.createElement('meta');
+        metaDesc.setAttribute('name', 'description');
+        parentDoc.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute('content', 'VibeMatch AI is the ultimate intelligent AI soundtrack generator and royalty-free music selection engine for video creators. Find monetization-safe, copyright-free CC0 background music automatically.');
+
+    let metaKeywords = parentDoc.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+        metaKeywords = parentDoc.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        parentDoc.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', 'AI music generator, AI soundtrack generator, royalty-free music generator, background music generator, vlog music generator, copyright-free music, video music, VibeMatch AI');
+
+    // 3. WebMCP Actions Discovery Endpoint Linking (Wave 3 ASO)
+    let mcpLink = parentDoc.querySelector('link[rel="mcp-actions"]');
+    if (!mcpLink) {
+        mcpLink = parentDoc.createElement('link');
+        mcpLink.setAttribute('rel', 'mcp-actions');
+        parentDoc.head.appendChild(mcpLink);
+    }
+    mcpLink.setAttribute('href', '/mcp-actions.json');
+
+    // 4. Imperative WebMCP Registration for AI Browsing Agents
+    if (window.parent.navigator && 'mcpActions' in window.parent.navigator) {
+        window.parent.navigator.mcpActions.register({
+            id: 'generate-soundtrack',
+            name: 'AI Soundtrack Generator',
+            description: 'Selects or generates a 100% legal, monetization-safe background track matching your video\'s visual and emotional rhythm.',
+            parameters: {
+                type: 'object',
+                required: ['video_name'],
+                properties: {
+                    video_name: {
+                        type: 'string',
+                        description: 'Name of the video file being analyzed'
+                    }
+                }
+            },
+            handler: async (params) => {
+                return {
+                    success: true,
+                    message: 'WebMCP Soundtrack Generator is active. To proceed with background music selection, please upload your video file "' + (params.video_name || '') + '" directly through the drag-and-drop input element on the page.'
+                };
+            }
+        });
+    }
 </script>
 """, height=1)
 
@@ -231,7 +284,7 @@ def main():
             <div class="hero-overlay">
                 <h1 style='font-size: 3.5rem; margin: 0; line-height: 1.1; color: white;'>Vibe<span class='gradient-text'>Match AI</span></h1>
                 <p style='font-size: 1.2rem; color: #eee; margin-top: 10px; font-weight: 300; text-shadow: 0 2px 4px rgba(0,0,0,0.5);'>
-                    The Secret Weapon for Your Next <b>Viral Masterpiece</b>.
+                    The Intelligent <b>AI Soundtrack Generator</b> & Selection Engine for Your Next Viral Masterpiece.
                 </p>
             </div>
         </div>
@@ -407,7 +460,7 @@ def main():
 
     st.markdown("""
         <div style="text-align: center; opacity: 0.7; font-size: 0.8rem; margin-top: 2rem;">
-            Built for Creators by VibeMatch AI • Sourcing 100% Legally Safe Audio
+            Built for Creators by VibeMatch AI • Intelligent AI Soundtrack Generator
             <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
                 <a href="https://github.com/peiyan0/vibematch-ai" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 5px;">
                     <svg height="16" width="16" viewBox="0 0 16 16" style="fill: currentColor;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>

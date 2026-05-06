@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "site": "https://vibematch-ai.streamlit.app/",
+  "actions": [
+    {
+      "id": "generate-soundtrack",
+      "name": "AI Soundtrack Generator",
+      "description": "Selects or generates a perfect, copyright-safe, monetization-ready background track matching your video's visual and emotional rhythm.",
+      "method": "declarative",
+      "endpoint": "/",
+      "parameters": {
+        "required": ["video"],
+        "properties": {
+          "video": {
+            "type": "string",
+            "format": "binary",
+            "description": "Video file (.mp4, .mov, .avi) to be processed and scored."
+          }
+        }
+      }
+    }
+  ]
+}
