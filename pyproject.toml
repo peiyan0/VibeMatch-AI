@@ -1,0 +1,20 @@
+[project]
+name = "vibematch-ai"
+version = "0.1.0"
+description = "VibeMatch AI: Intelligent AI Soundtrack & Royalty-Free Music Generator"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit",
+    "opencv-python-headless",
+    "torch",
+    "torchvision",
+    "sentence-transformers",
+    "ffmpeg-python",
+    "requests",
+    "python-dotenv",
+    "numpy",
+    "pillow",
+    "scikit-learn",
+    "scikit-image",
+]

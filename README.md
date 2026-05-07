@@ -22,13 +22,31 @@
 ## 🚀 Quick Start
 
 ### 1. Prerequisites
-Ensure you have Python 3.9+ installed. We recommend using a virtual environment.
+Ensure you have Python 3.12+ installed. We recommend using Astral's [uv](https://github.com/astral-sh/uv) 
 
 ### 2. Installation
+
+Choose one of the following setup options:
+
+#### Option A: Using `uv` (Recommended)
 ```bash
 # Clone the repository
 git clone https://github.com/peiyan0/vibematch-ai.git
 cd vibematch-ai
+
+# Synchronize dependencies and build a local .venv automatically
+uv sync
+```
+
+#### Option B: Standard `pip` & `venv` (Fallback)
+```bash
+# Clone the repository
+git clone https://github.com/peiyan0/vibematch-ai.git
+cd vibematch-ai
+
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -42,6 +60,13 @@ FREESOUND_API_KEY=your_key_here
 *Get your key at: [freesound.org/apiv2/apply](https://freesound.org/apiv2/apply)*
 
 ### 4. Run the Dashboard
+
+#### If using `uv` (Recommended)
+```bash
+uv run streamlit run app.py
+```
+
+#### If using standard `pip`
 ```bash
 streamlit run app.py
 ```
