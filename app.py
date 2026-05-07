@@ -344,7 +344,7 @@ def main():
                 <div style="text-align: center; padding: 2rem 1rem;">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">👀</div>
                     <h4 style="margin: 0; opacity: 1.0;">Waiting for input...</h4>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Your video's DNA will appear here after analysis.</p>
+                    <p style="opacity: 0.8; font-size: 0.9rem;">Your video's vibe will appear here after analysis.</p>
                 </div>
             """, unsafe_allow_html=True)
             
